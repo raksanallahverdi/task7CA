@@ -283,28 +283,26 @@
 //     Console.WriteLine();
 // }
 
-// int[,] array =
-// {
-//     {890,34,5}, 
-//     {1, 30,300},
-//     {50,40,-20}
-// };
-// task14 rowlarin
+int[,] array =
+{
+    {890,34,5}, 
+    {1, 30,300},
+    {50,40,-20}
+};
+
+// task14 rowlarin cemi
 // int sum1=0;
-// int sum2=0;
-// int sum3=0;
 // for (int i=0;i<array.GetLength(0);i++)
 // {
+//     sum1=0;
 //     for (int y=0;y<array.GetLength(1);y++)
 //     {
-//       sum1=array[0,y];
-//       sum2=array[1,y];
-//       sum3=array[2,y];
+//       sum1+=array[i,y];
 //     }
+//     Console.WriteLine(sum1);
 // }
-// Console.WriteLine(sum1);
-// Console.WriteLine(sum2);
-// Console.WriteLine(sum3);
+
+
 
 // // task15 columnlarin cemi
 // int sum1=0;
@@ -384,35 +382,9 @@
 //     }
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// int[,] array={
+//     {1,1,0,0,1,1},
+//     {1,7,0,0,1,1},
+//     {1,1,0,0,1,1},
+//     {9,1,0,0,1,1}
+// };
