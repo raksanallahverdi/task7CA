@@ -195,7 +195,7 @@
 //         if (i+y==3){
 //             sum+=array[i,y];
 //         }
-      
+
 //     }
 // }
 // Console.WriteLine(sum);
@@ -216,7 +216,7 @@
 //         if (i>y){
 //             array[i,y]=0;
 //         }
-      
+
 //     }
 // }
 // for (int i=0;i<array.GetLength(0);i++)
@@ -236,7 +236,7 @@
 //         if (i<y){
 //             array[i,y]=0;
 //         }
-      
+
 //     }
 // }
 // for (int i=0;i<array.GetLength(0);i++)
@@ -272,7 +272,7 @@
 //     {
 //         array3[i,y]=array1[i,y]+array2[i,y];
 //     }
-   
+
 // }
 // for (int i=0;i<array3.GetLength(0);i++)
 // {
@@ -306,20 +306,69 @@ int[,] array =
 
 // // task15 columnlarin cemi
 // int sum1=0;
-// int sum2=0;
-// int sum3=0;
 // for (int i=0;i<array.GetLength(0);i++)
+// {
+//     sum1=0;
+//     for (int y=0;y<array.GetLength(1);y++)
+//     {
+//       sum1+=array[y,i];
+//     }
+//     Console.WriteLine(sum1);
+// }
+
+
+
+
+
+// task16 
+
+// int[,] array={
+//     {5,9,6,2,8,3},
+//     {1,7,0,0,1,1},
+//     {1,1,0,0,1,1}
+// };
+
+// int shift=3;
+// bool[] visited = new bool[array.GetLength(1)];
+// for (int i=0;i<array.GetLength(0);i++)
+// {
+    
+//     for (int y=0;y<array.GetLength(1);y++)
+//     {
+        
+//             if(y+shift+shift<array.GetLength(1)){
+//                 array[i,y+shift+shift]=array[i,y+shift]; 
+
+                //ilk once index4 deyishib sonra index2 deyishmek
+// soldan bashlayaraq chevirmek duzgun deil ona gore bu kodda duzgun alinmasi uchun her defe soldaki
+//  elementi yaddasha vurub deyishmek lazim olur yadaki,meselen ilk once y+shift+shift deyishib sonra y+shifti deyishmek.
+// bu yuxaridaki line spesific olaraq case=2 de ishlemesi uchundur.shift 3,4,5 ... ve s. problem olmur chunki zaten 
+// Length=6 dir, 6 nin ichinde 3,4,5 dovre dushmur,amma shift=1 shift=2 dovre dushur 
+// ona gore soldan bashlayaraq deyishmek best case deyil.
+
+//                 array[i,y+shift]=array[i,y];
+//                 visited[y + shift] = true; 
+//              array[i,y]=0;
+//             }
+//             else if(!visited[y] && y+shift<array.GetLength(1))
+//             {
+//             array[i,y+shift]=array[i,y];
+//             array[i,y]=0;
+//         }
+//          if(y<shift ){
+//                 array[i,y]=0;
+
+//              }
+//     }
+// }
+// for (int ik=0;ik<array.GetLength(0);ik++)
 // {
 //     for (int y=0;y<array.GetLength(1);y++)
 //     {
-//       sum1=array[i,0];
-//       sum2=array[i,1];
-//       sum3=array[i,2];
+//         Console.Write(array[ik,y]+" ");
 //     }
+//     Console.WriteLine();
 // }
-// Console.WriteLine(sum1);
-// Console.WriteLine(sum2);
-// Console.WriteLine(sum3);
 
 // int[,] array1 =
 // {
@@ -357,18 +406,19 @@ int[,] array =
 
 // int[,] array =
 // {
-//     {13,34,890}, 
+//     {13,-34,890}, 
 //     {1, 9,300},
 //     {50,40,7}
 // };
 
-// // task18 sade ededler
+// // // task18 sade ededler
 // bool isComplex=false;
 // for (int i=0;i<array.GetLength(0);i++)
 // {
 //     for (int y=0;y<array.GetLength(1);y++)
 //     {
-//          isComplex=false;
+//         if (array[i,y]>0){
+//             isComplex=false;
 //         int kok=Convert.ToInt32(Math.Sqrt(array[i,y]));
 //         for (int k=2;k<=kok;k++){
 //             if (array[i,y]%k==0){
@@ -378,13 +428,11 @@ int[,] array =
 //          if (!isComplex && array[i,y]!=1 ){
 //            Console.WriteLine(array[i,y]);
 //         }
-        
+//         }
+
+
 //     }
 // }
 
-// int[,] array={
-//     {1,1,0,0,1,1},
-//     {1,7,0,0,1,1},
-//     {1,1,0,0,1,1},
-//     {9,1,0,0,1,1}
-// };
+
+
